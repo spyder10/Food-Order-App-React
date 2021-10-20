@@ -1,16 +1,13 @@
 import Modal from "../UI/Modal/Modal";
 import styles from "./Cart.module.css";
+import CartContext from "../../store/cart-context";
+import {useContext} from 'react';
+import CartItem from "./CartItem"; 
 
 function Cart(props) {
-  const cartItems = [
-    {
-      id: "m1",
-      name: "Sushi",
-      description: "Finest fish and veggies",
-      price: 22.99,
-    },
-  ].map((item) => {
-    return item.name;
+  const ctx = useContext(CartContext);
+  const cartItems = ctx.items.map((item) => {
+    return <CartItem item={item}></CartItem>
   });
 
   return (
@@ -18,7 +15,7 @@ function Cart(props) {
       <div className={styles['cart-items']}>{cartItems}</div>
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>22</span>
+        <span>{ctx.totalAmount}</span>
       </div>
       <div className={styles.actions}>
         <button onClick={props.onCancelClick}>Cancel</button>
