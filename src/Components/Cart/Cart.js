@@ -15,11 +15,11 @@ function Cart(props) {
       <div className={styles['cart-items']}>{cartItems}</div>
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>{ctx.totalAmount}</span>
+        <span>₹{ctx.totalAmount}</span>
       </div>
       <div className={styles.actions}>
         <button onClick={props.onCancelClick}>Cancel</button>
-        <button>Order</button>
+        <button disabled={ctx.items.length === 0}>Order</button>
       </div>
     </Modal>
   );

@@ -5,27 +5,27 @@ import MealItem from "./MealItem";
 const DUMMY_MEALS = [
   {
     id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
+    name: "Dal Makhni",
+    description: "Finest dal with delicious butter",
+    price: 175,
   },
   {
     id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.5,
+    name: "Cheeze Tomato",
+    description: "Cheeze on top on tasty tomato gravy",
+    price: 185,
   },
   {
     id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12.99,
+    name: "Butter Naan",
+    description: "fresh Indian Naan",
+    price: 45,
   },
   {
     id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 18.99,
+    name: "Paneer Butter Masala",
+    description: "Tasty paneer with veg gravy",
+    price: 180,
   },
 ];
 function AvailableMeals() {
